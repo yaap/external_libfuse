@@ -64,6 +64,9 @@ cc_defaults {
 
     ldflags: [
     ],
+    lto: {
+        never: true,
+    },
 }
 
 cc_library {
