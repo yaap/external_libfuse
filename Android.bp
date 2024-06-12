@@ -98,6 +98,11 @@ cc_library {
         "lib/mount_util.c",
     ],
 
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.mediaprovider",
+    ],
+
     // Workaround LTO build breakage.
     lto_O0: true,
 }
