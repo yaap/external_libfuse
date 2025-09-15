@@ -15,4 +15,7 @@ third_party {
     value: "https://github.com/libfuse/libfuse.git"
     version: "eca63dab456a10c3491c367711ab18cbcb34816e"
   }
+  security: {
+    tag: "NVD-CPE2.3:cpe:/a:redhat:fuse:3.17.0"
+  }
 }
