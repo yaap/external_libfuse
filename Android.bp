@@ -56,7 +56,13 @@ cc_defaults {
         "-Wno-missing-field-initializers",
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
-    ],
+    ] + select(release_flag("RELEASE_BUILD_CLANG_VERSION"), {
+        "clang-r584948": [
+            // Can be removed when https://github.com/libfuse/libfuse/issues/1360 is fixed.
+            "-Wno-uninitialized-const-pointer",
+        ],
+        default: [],
+    }),
 
     sdk_version: "current",
     min_sdk_version: "30",
